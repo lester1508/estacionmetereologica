@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Meteorológicos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="configuracion/configuracion.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center text-primary">Datos de la Estación Meteorológica</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-secondary">Velocidad del Viento</h2>
+                <div class="resultado">
+                    <p>Velocidad:</p>
+                    <div class="data" id="windSpeedResult">0 m/s</div>
+                </div>
+                <canvas id="windSpeedChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-secondary">Cantidad de Lluvia</h2>
+                <div class="resultado">
+                    <p>Cantidad:</p>
+                    <div class="data" id="rainCountResult">0 mm</div>
+                </div>
+                <canvas id="rainCountChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
